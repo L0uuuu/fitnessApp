@@ -1,0 +1,22 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.ApplicationMobile" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Splash screen -->
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo_app</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+
+        <item name="materialThemeOverlay">@style/LatoOverlay</item>
+    </style>
+
+
+    <!-- Apply global font -->
+    <style name="LatoOverlay">
+        <item name="fontFamily">@font/lato_regular</item>
+        <item name="android:textColor">#192126</item>
+    </style>
+
+
+</resources>
+

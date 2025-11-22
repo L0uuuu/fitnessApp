@@ -1,0 +1,104 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top images -->
+    <FrameLayout
+        android:id="@+id/imageContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/welcome_img" />
+
+        <ImageView
+            android:id="@+id/fadeImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_gravity="bottom"
+            android:src="@drawable/welcome_fade" />
+    </FrameLayout>
+
+    <!-- First line -->
+    <TextView
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wherever You Are"
+        android:textSize="30sp"
+        app:fontFamily="@font/lato_black"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/imageContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Second line with shape overlaid -->
+    <FrameLayout
+        android:id="@+id/line2Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/shape"
+            android:layout_width="95dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/shape"
+            android:translationY="10dp" />
+
+        <TextView
+            android:id="@+id/line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Health Is Number One"
+            android:textSize="30sp"
+            app:fontFamily="@font/lato_black"
+            android:textAlignment="center"/>
+    </FrameLayout>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There is no instant way to a healthy life"
+        android:textSize="15sp"
+        android:alpha="0.5"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/line2Container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="268dp"
+        android:layout_height="76dp"
+        android:text="Get Started"
+        android:textSize="20sp"
+        app:fontFamily="@font/lato_bold"
+        app:backgroundTint="@color/button_background"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="50dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

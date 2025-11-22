@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calorieInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp"
+    tools:context=".RelAct1">
+
+    <!-- HEADER -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#3F51B5"
+        android:padding="12dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calorie Intake Calculator"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- FOOTER -->
+    <RelativeLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3F51B5"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/footerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="© 2025 CalorieApp"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- FORM CARD -->
+    <RelativeLayout
+        android:id="@+id/formCardContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@id/footerLayout"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:background="@drawable/form_background">
+
+        <ScrollView
+            android:id="@+id/scrollForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:id="@+id/formInner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <!-- Name -->
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Age -->
+                <EditText
+                    android:id="@+id/etAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etName"
+                    android:layout_marginTop="12dp" />
+                <!-- Age -->
+                <EditText
+                    android:id="@+id/etAge2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etAge"
+                    android:layout_marginTop="12dp" />
+                <EditText
+                    android:id="@+id/etAge3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etAge2"
+                    android:layout_marginTop="12dp" />
+                <EditText
+                    android:id="@+id/etAge4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etAge3"
+                    android:layout_marginTop="12dp" />
+                <EditText
+                    android:id="@+id/etAge5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etAge4"
+                    android:layout_marginTop="12dp" />
+                <EditText
+                    android:id="@+id/etAge6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Age"
+                    android:inputType="number"
+                    android:layout_below="@id/etAge5"
+                    android:layout_marginTop="12dp" />
+                <!-- Gender -->
+                <RelativeLayout
+                    android:id="@+id/genderSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etAge6"
+                    android:layout_marginTop="12dp"
+                    android:padding="8dp"
+                    android:background="#F5F5F5">
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gender:"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginBottom="8dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvGender"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:checked="true" />
+
+                        <RadioButton
+                            android:id="@+id/radioFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:layout_marginStart="24dp" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <!-- Height -->
+                <EditText
+                    android:id="@+id/etHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Height (cm)"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@id/genderSection"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Weight -->
+                <EditText
+                    android:id="@+id/etWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Weight (kg)"
+                    android:inputType="numberDecimal"
+                    android:layout_below="@id/etHeight"
+                    android:layout_marginTop="12dp" />
+
+                <!-- Activity Level -->
+                <RelativeLayout
+                    android:id="@+id/activitySection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/etWeight"
+                    android:layout_marginTop="16dp"
+                    android:padding="8dp"
+                    android:background="#F5F5F5">
+
+                    <TextView
+                        android:id="@+id/tvActivityLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activity Level: 1 (Sedentary)"
+                        android:textStyle="bold"
+                        android:layout_centerHorizontal="true" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarActivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvActivityLabel"
+                        android:max="3"
+                        android:progress="0"
+                        android:layout_marginTop="8dp" />
+
+                    <LinearLayout
+                        android:id="@+id/seekLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seekBarActivity"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sedentary"
+                            android:textSize="12sp"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Light"
+                            android:textSize="12sp"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Moderate"
+                            android:textSize="12sp"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Active"
+                            android:textSize="12sp"
+                            android:textAlignment="center" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!-- Calculate Button -->
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate"
+                    android:layout_below="@id/activitySection"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="#3F51B5"
+                    android:textColor="#FFFFFF" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>
