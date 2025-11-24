@@ -14,7 +14,7 @@
     <!-- Apply global font -->
     <style name="LatoOverlay">
         <item name="fontFamily">@font/lato_regular</item>
-        <item name="android:textColor">#192126</item>
+        <item name="android:textColor">@color/primaryColor</item>
     </style>
 
 

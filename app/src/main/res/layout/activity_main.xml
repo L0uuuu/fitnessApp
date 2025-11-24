@@ -43,7 +43,7 @@
         android:text="SIGN IN"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        app:backgroundTint="@color/button_background"
+        app:backgroundTint="@color/primaryColor"
         app:cornerRadius="100dp"
         app:fontFamily="@font/lato_black"
         app:layout_constraintEnd_toEndOf="parent"

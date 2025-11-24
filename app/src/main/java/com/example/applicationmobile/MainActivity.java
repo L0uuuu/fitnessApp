@@ -1,6 +1,7 @@
 // MainActivity.java
 package com.example.applicationmobile;  // ← CHANGE THIS TO YOUR REAL PACKAGE NAME
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -37,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         // === SIGN UP BUTTON ===
         btnSignUp.setOnClickListener(v -> {
-            Toast.makeText(this, "Opening Sign Up screen...", Toast.LENGTH_SHORT).show();
-            // TODO: Start your Sign-Up Activity
-            // startActivity(new Intent(MainActivity.this, SignUpActivity.class));
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+            startActivity(intent);
         });
 
         // === FACEBOOK ===
