@@ -1,10 +1,12 @@
 package com.example.applicationmobile;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -16,14 +18,20 @@ import androidx.core.view.WindowInsetsCompat;
 public class SignUpActivity extends AppCompatActivity {
     TextView text1;
     TextView txtSignIn;
+    Button btnSignUp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_sign_up);
 
-        //changing the text color
+        // Initialize all views
         text1 = findViewById(R.id.text1);
+        txtSignIn = findViewById(R.id.txtSignIn);
+        btnSignUp = findViewById(R.id.btnSignUp); // ADD THIS LINE
+
+        //changing the text color
         String fullText = "Create Your\nAccount";
 
         //SpannableString is a special type of string that allows us to apply different styles (spans) to different parts of the text
@@ -51,9 +59,7 @@ public class SignUpActivity extends AppCompatActivity {
         );
         text1.setText(spannableString);
 
-        txtSignIn = findViewById(R.id.txtSignIn);
         String text = "Sign In";
-
         SpannableString spannableStringSignIn = new SpannableString(text);
         spannableStringSignIn.setSpan(
                 new ForegroundColorSpan(customColor),
@@ -61,6 +67,12 @@ public class SignUpActivity extends AppCompatActivity {
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         );
         txtSignIn.setText(spannableStringSignIn);
+
+        // Now btnSignUp is properly initialized
+        btnSignUp.setOnClickListener(v -> {
+            Intent intent = new Intent(SignUpActivity.this, FirstActivity.class);
+            startActivity(intent);
+        });
 
     }
 }
