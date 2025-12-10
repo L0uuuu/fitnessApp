@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FAFAFA"
-    android:padding="16dp"
     tools:context=".RelAct2">
 
     <!-- Header -->
@@ -27,68 +26,117 @@
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <!-- Card -->
-    <RelativeLayout
-        android:id="@+id/resultCard"
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/headerLayout"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
-        android:padding="20dp"
-        android:background="@drawable/form_background"
-        android:elevation="3dp">
+        android:layout_above="@id/footerLayout"
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name:"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true" />
-
-        <TextView
-            android:id="@+id/tvAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Age:"
-            android:textSize="18sp"
-            android:layout_below="@id/tvName"
-            android:layout_marginTop="12dp" />
-
-        <TextView
-            android:id="@+id/tvGender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Gender:"
-            android:textSize="18sp"
-            android:layout_below="@id/tvAge"
-            android:layout_marginTop="12dp" />
-
-        <TextView
-            android:id="@+id/tvCalories"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calories:"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#3F51B5"
-            android:gravity="center"
-            android:layout_below="@id/tvGender"
-            android:layout_marginTop="24dp" />
-    </RelativeLayout>
+            android:orientation="vertical">
 
-    <!-- Go Back Button -->
-    <Button
-        android:id="@+id/btnGoBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Go Back"
-        android:backgroundTint="#3F51B5"
-        android:textColor="#FFFFFF"
-        android:layout_below="@id/resultCard"
-        android:layout_centerHorizontal="true" />
+            <!-- Card -->
+            <RelativeLayout
+                android:id="@+id/resultCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:padding="20dp"
+                android:background="@drawable/form_background"
+                android:elevation="3dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age:"
+                    android:textSize="18sp"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender:"
+                    android:textSize="18sp"
+                    android:layout_below="@id/tvAge"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvCalories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calories:"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#3F51B5"
+                    android:gravity="center"
+                    android:layout_below="@id/tvGender"
+                    android:layout_marginTop="24dp" />
+            </RelativeLayout>
+
+            <!-- Get Meals Button -->
+            <Button
+                android:id="@+id/btnGetMeals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🤖 Get AI Meal Suggestions"
+                android:backgroundTint="#4CAF50"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Meal Suggestions Text -->
+            <TextView
+                android:id="@+id/tvMealSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp"
+                android:background="@drawable/form_background"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Go Back Button -->
+            <Button
+                android:id="@+id/btnGoBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Go Back"
+                android:backgroundTint="#3F51B5"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Footer -->
     <RelativeLayout
