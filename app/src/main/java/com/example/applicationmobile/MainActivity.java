@@ -29,12 +29,11 @@ public class MainActivity extends AppCompatActivity {
         btnGoogle   = findViewById(R.id.btn_google);
         btnApple    = findViewById(R.id.btn_apple);
 
-        // === SIGN IN BUTTON ===
         btnSignIn.setOnClickListener(v -> {
-            Toast.makeText(this, "Opening Sign In screen...", Toast.LENGTH_SHORT).show();
-            // TODO: Start your Sign-In Activity or show dialog
-            // Example: startActivity(new Intent(MainActivity.this, SignInActivity.class));
+            SignInBottomSheet bottomSheet = new SignInBottomSheet();
+            bottomSheet.show(getSupportFragmentManager(), "SignInBottomSheet");
         });
+
 
         // === SIGN UP BUTTON ===
         btnSignUp.setOnClickListener(v -> {
